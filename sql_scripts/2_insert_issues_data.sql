@@ -17,7 +17,7 @@ INSERT INTO issues (title, type, number, event, reading_order) VALUES
 ("Avengers: X-Sanction", "Avengers", 1, "Avengers vs X-Men", 1),
 ("Avengers: X-Sanction", "Avengers", 2, "Avengers vs X-Men", 2),
 ("Avengers: X-Sanction", "Avengers", 3, "Avengers vs X-Men", 3),
-("Avengers Academy", "Avengers", 26, "Avengers vs X-Men", 4)
+("Avengers Academy", "Avengers", 26, "Avengers vs X-Men", 4),
 ("Avengers", "Avengers", 24, "Avengers vs X-Men", 5),
 ("Avengers: X-Sanction", "Avengers", 4, "Avengers vs X-Men", 6),
 ("Avengers vs X-Men", "Limited Series", 0, "Avengers vs X-Men", 7),
