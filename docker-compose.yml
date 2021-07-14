@@ -1,0 +1,29 @@
+# Use root/example as user/password credentials
+version: '3.8'
+services:
+  issues-db:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    volumes:
+      - ./sql_scripts:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      comics-network:
+        aliases:
+          - issues-db
+  events-db:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      comics-network:
+        aliases:
+          - events-db
+networks:
+  comics-network:
