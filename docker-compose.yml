@@ -1,4 +1,4 @@
-# Use root/example as user/password credentials
+# Use root/root as user/password credentials
 version: '3.8'
 services:
   issues-db:
