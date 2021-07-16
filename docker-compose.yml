@@ -16,6 +16,7 @@ services:
         aliases:
           - issues-db
   events-db:
+    container_name: events-db
     image: mysql:8
     command: --default-authentication-plugin=mysql_native_password
     ports:
@@ -26,5 +27,15 @@ services:
       comics-network:
         aliases:
           - events-db
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      -15672:15672
+      -5672:5672
+    networks: 
+      comics-network:
+        aliases:
+          -rabbitmq
 networks:
   comics-network:
