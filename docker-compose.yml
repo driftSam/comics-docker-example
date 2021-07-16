@@ -36,6 +36,6 @@ services:
     networks: 
       comics-network:
         aliases:
-          -rabbitmq
+          - rabbitmq
 networks:
   comics-network:
